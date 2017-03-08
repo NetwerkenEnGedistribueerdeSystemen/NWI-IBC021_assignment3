@@ -34,6 +34,8 @@
 	\end{tabular}
 
 	\item %b
+	The NAT router receives a packet with some destination IP and port. It then looks up this address in its NAT table to get the LAN side IP and port this address corresponds to. The packet's destination address is replaced by the NAT with the new LAN side destination address, the new checksum is calculated and set, and the packet is sent to the LAN.
+
 	\item %c
 \end{enumerate}
 
