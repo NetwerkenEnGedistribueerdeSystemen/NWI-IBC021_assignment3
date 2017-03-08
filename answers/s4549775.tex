@@ -44,6 +44,12 @@
 \section{} %2
 \begin{enumerate}[a]
 	\item %a
+	Every router needs to be able to communicate with every other router for the subnets to be connected. Every router has 4 interfaces and we have 3 routers so this makes 12 interfaces in total.
+
+	If we assume that the routers can use routing protocols it is sufficient if there exists a path between two routers for them to be able to communicate and no direct connection is required. We use 2 interfaces to connect two routers (one interface for each of them). Concordantly we need $2 * 2 = 4$ of our 12 interfaces to connect the routers to each other.
+
+	This leaves us with 8 interfaces that can be connected to subnets so 8 subnets can be connected, one to each interface.
+
 	\item %b
 \end{enumerate}
 
