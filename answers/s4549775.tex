@@ -51,6 +51,17 @@
 	This leaves us with 8 interfaces that can be connected to subnets so 8 subnets can be connected, one to each interface.
 
 	\item %b
+	We can only have a resolution of powers of two. $90 < 2^7, 60 < 2^6, 12 < 2^6$ so we can serve all interfaces with 7 and 6 bits of freedom respectively thus giving us these possible addresses:
+
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Subnet & IP & Nr of addresses\\\hline
+		1 & 223.1.17.0/26 & 64\\
+		2 & 223.1.17.128/25 & 128\\
+		3 & 223.1.17.64/26 & 64\\
+		\hline
+	\end{tabular}
+
 \end{enumerate}
 
 \section{} %3
