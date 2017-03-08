@@ -81,6 +81,29 @@
 \section{} %5
 \begin{enumerate}[1]
 	\item %a
+	IPv4 uses variable length headers while IPv6 has a fixed header size. IPv6 is much simpler than IPv4 and has 128 bit addresses compared to IPv4's 32 bit address space.
+
+	\begin{tabular}{|p{18em}|c|c|}
+		\hline
+		\textbf{Description} & \multicolumn{2}{|c|}{\textbf{Field}}\\\hline
+		& \textbf{IPv4} & \textbf{IPv6}\\\hline
+		Version of the protocol & Version & Version\\\hline
+		Length of the header & IHL &\\\hline
+		Type of the service & DSCP & Traffic Class\\\hline
+		Congestion Notification (IPv6 uses only the 2 least significant bits of the "Traffic Class" field for this) & ECN & Traffic Class\\\hline
+		Length of the Content (for IPv4 this includes the header, which does not have a fixed site, for IPv6 it just includes the payload) & Total Length & Payload Length\\\hline
+		Identification of groups of fragments (IPv6 does not include fragmentation) & Identification &\\\hline
+		Flags to control fragmentation & Flags &\\\hline
+		Fragmentation offset & Fragmentation Offset &\\\hline
+		Remaining Hops until the packet is discarded (each router on the way decrements this number by 1) & TTL & Hop Limit\\\hline
+		Protocol used in the datagram & Protocol &\\\hline
+		Header Checksum (Because the TTL field is considered when calculating this checksum it is basically useless as it changes on every hop.) & Header Checksum &\\\hline
+		Source Address (origin of the packet) & Source Address & Source Address\\\hline
+		Destination Address () & Destination Address & Destination Address\\\hline
+		Additional Options enabled via IHL & Options &\\\hline
+		Flow Label used to maintain the sequential flow of packets && Flow Label\\\hline
+	\end{tabular}
+
 	\item %b
 \end{enumerate}
 
